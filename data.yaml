@@ -1,0 +1,9 @@
+train: train/images
+val: valid/images
+test: test/images
+
+names: 
+  0: paper
+  1: plastic
+  2: lata
+  3: plastic
