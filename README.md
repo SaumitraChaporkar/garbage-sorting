@@ -90,19 +90,6 @@ python t4.py
 
 ---
 
-## Performance (Example)
-
-| Metric        | Value |
-| ------------- | ----- |
-| mAP@0.5       | XX %  |
-| Precision     | XX %  |
-| Recall        | XX %  |
-| Inference FPS | XX    |
-
-*(Replace XX with your real results if available.)*
-
----
-
 ## Demo
 
 * Add screenshots of predictions
