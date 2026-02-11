@@ -1,29 +1,30 @@
-# Garbage Sorting using YOLO & Computer Vision
+# Garbage Sorting using YOLO and Computer Vision
 
 ## Overview
 
-This project implements an **AI-powered garbage sorting system** using state-of-the-art object detection models (YOLOv8 and YOLOv11). The system is trained on a **custom Roboflow dataset** to detect and classify different types of waste for automated segregation in recycling plants, smart cities, and robotic sorting stations.
+This project presents an AI-based garbage sorting system that uses deep learning object detection models to classify waste materials automatically. The system is designed to support automated segregation in recycling facilities, smart city waste management, and robotic sorting applications.
 
-The goal is to reduce human effort, improve recycling efficiency, and enable real-time intelligent waste classification.
-
----
-
-## Key Objectives
-
-* Automate garbage classification using deep learning
-* Reduce manual waste segregation effort
-* Improve recycling accuracy and throughput
-* Enable real-time detection for robotic or conveyor-belt systems
+The model is trained using a custom dataset prepared with Roboflow and utilizes Ultralytics YOLO architectures for accurate and real-time detection.
 
 ---
 
-## Tech Stack
+## Objectives
 
-* **Python**
-* **Ultralytics YOLO (YOLOv8, YOLOv11)**
-* **OpenCV**
-* **Roboflow** (dataset collection & annotation)
-* **NumPy, Matplotlib**
+* Automate waste classification using computer vision and deep learning
+* Improve efficiency and accuracy of recycling processes
+* Reduce manual sorting efforts
+* Enable integration with automated conveyor or robotic sorting systems
+
+---
+
+## Technologies Used
+
+* Python
+* Ultralytics YOLO (YOLOv8, YOLOv11)
+* OpenCV
+* Roboflow (Dataset Annotation and Management)
+* NumPy
+* Matplotlib
 
 ---
 
@@ -32,11 +33,9 @@ The goal is to reduce human effort, improve recycling efficiency, and enable rea
 ```
 code/
 │
-├── train.py              # YOLO training script
+├── train.py              # Model training script
 ├── t4.py                 # Inference / testing script
 ├── data.yaml             # Dataset configuration file
-├── README.dataset        # Roboflow dataset metadata
-├── README.roboflow       # Roboflow project metadata
 ├── requirements.txt      # Python dependencies
 ├── README.md             # Project documentation
 └── .gitignore            # Git ignore rules
@@ -46,85 +45,79 @@ code/
 
 ## System Workflow
 
-1. Collect garbage images using camera or open datasets
-2. Annotate images using Roboflow
-3. Export dataset in YOLO format
-4. Train YOLOv8/YOLOv11 model on custom dataset
-5. Validate model performance
-6. Run inference on test images or live camera feed
-7. (Optional) Trigger robotic arm or sorting actuator
+1. Collect waste images using cameras or public datasets
+2. Annotate and organize the dataset using Roboflow
+3. Export annotated dataset in YOLO format
+4. Train YOLO-based detection model using custom dataset
+5. Evaluate model performance using validation data
+6. Perform inference on test images or live camera feed
+7. (Optional) Integrate detection output with sorting mechanisms such as robotic arms or conveyor systems
 
 ---
 
-## How to Run
+## Installation and Setup
 
-### 1️⃣ Install Dependencies
+### Install Dependencies
 
-```bash
+```
 pip install -r requirements.txt
 ```
 
-### 2️⃣ Train the Model
+---
 
-```bash
+## Model Training
+
+```
 python train.py
 ```
 
-### 3️⃣ Run Inference
+---
 
-```bash
+## Model Inference
+
+```
 python t4.py
 ```
 
 ---
 
-## Model Details
+## Model Configuration
 
-* **Architecture:** YOLOv8n / YOLOv11n
-* **Task:** Object Detection
-* **Dataset:** Custom garbage dataset (Roboflow)
-* **Classes:** Plastic, Paper, Metal, Organic (example)
-* **Input Size:** 640 × 640
-* **Optimizer:** Adam
-* **Loss:** CIoU + Classification + Objectness
-
----
-
-## Demo
-
-* Add screenshots of predictions
-* Add YOLO result images
-* Add short demo video link (Google Drive / YouTube)
+* Architecture: YOLOv8n / YOLOv11n
+* Task Type: Object Detection
+* Dataset Source: Custom Garbage Dataset (Roboflow)
+* Example Classes: Plastic, Paper, Metal, Organic
+* Input Resolution: 640 × 640
+* Optimization: Adam Optimizer
+* Loss Functions: CIoU Loss, Classification Loss, Objectness Loss
 
 ---
 
-## Future Improvements
+## Applications
 
-* Real-time webcam integration
-* Edge deployment on Raspberry Pi / Jetson Nano
-* Robotic arm integration for physical sorting
-* Additional waste categories
-* Web dashboard for monitoring
+* Automated recycling plants
+* Smart waste segregation systems
+* Industrial sorting automation
+* Robotics-based waste handling systems
 
 ---
 
-## Resume Bullet Points
+## Future Enhancements
 
-* Built an AI-based garbage sorting system using YOLOv8 and YOLOv11 for automated waste classification
-* Trained a custom object detection model on Roboflow-annotated garbage dataset
-* Implemented real-time inference pipeline using Python and OpenCV
-* Designed a reproducible ML workflow with clean Git version control
+* Real-time webcam-based detection
+* Edge deployment using embedded platforms such as Raspberry Pi or NVIDIA Jetson
+* Expansion of waste classification categories
+* Integration with industrial automation dashboards
 
 ---
 
 ## Author
 
-**Saumitra Chaporkar**
-Automation & Robotics Engineer
-Robotics | AI | Computer Vision
+Saumitra Chaporkar
+Automation and Robotics Engineering
 
 ---
 
-## If you like this project
+## License
 
-Give this repository a  on GitHub to support my work!
+This project is intended for academic and research purposes.
